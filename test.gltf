@@ -1,0 +1,29 @@
+{
+  "asset": {
+    "version": "2.0",
+    "extras": "<script>alert('XSS via extras')</script>"
+  },
+  "scene": 0,
+  "scenes": [
+    { "nodes": [0] }
+  ],
+  "nodes": [
+    { "mesh": 0 }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {},
+          "extras": "<img src=x onerror=alert('XSS via mesh.extras')>"
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "uri": "texture.png\"><script>alert('XSS via uri')</script><!--"
+    }
+  ]
+}
