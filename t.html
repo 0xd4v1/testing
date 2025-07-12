@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vídeo com Botão de Ação</title>
+  <style>
+    /* Container dimensionado no padrão 16:9 */
+    .video-container {
+      position: relative;
+      width: 560px;
+      height: 315px;
+      margin: 1em auto;
+    }
+    /* Vídeo ocupa todo o container */
+    .video-container video {
+      width: 100%;
+      height: 100%;
+    }
+    /* Botão sobreposto */
+    .video-container .btn-calc {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    }
+    .video-container .btn-calc:hover {
+      background: rgba(0, 0, 0, 0.85);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+
+    <video src="video.mp4" controls></video>
+
+    <a class="btn-calc" href="javascript:alert(1)">Abrir Calculadora</a>
+  </div>
+
+</body>
+</html>
