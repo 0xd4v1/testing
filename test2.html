@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Embed de Vídeo com Botão</title>
+
+  <!-- 1) Open Graph: declare que essa página é um vídeo “rich” -->
+  <meta property="og:type"           content="video.other" />
+  <meta property="og:video"          content="https://0xd4v1.github.io/testing/t.html" />
+  <meta property="og:video:secure_url" content="https://0xd4v1.github.io/testing/t.html" />
+  <meta property="og:video:type"     content="text/html" />
+  <meta property="og:video:width"    content="560" />
+  <meta property="og:video:height"   content="315" />
+
+  <!-- 2) Twitter Player Card (fallback) -->
+  <meta name="twitter:card"           content="player" />
+  <meta name="twitter:player"         content="https://0xd4v1.github.io/testing/t.html" />
+  <meta name="twitter:player:width"   content="560" />
+  <meta name="twitter:player:height"  content="315" />
+
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16/9;
+      margin: auto;
+      background: #000;
+    }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .video-container .btn-calc {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    }
+    .video-container .btn-calc:hover {
+      background: rgba(0,0,0,0.85);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <!-- O Discord vai “iframe-ar” esta própria página porque og:video aponta pra aqui -->
+    <video src="video.mp4" controls></video>
+    <a class="btn-calc" href="calculator://aaa">Abrir Calculadora</a>
+  </div>
+</body>
+</html>
