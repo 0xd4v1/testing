@@ -1,0 +1,17 @@
+<!-- seila.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>aaaaaa</title>
+</head>
+<body>
+  <h1>yes</h1>
+  <div id="output"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("output").innerHTML = params.get("fodase");
+  </script>
+</body>
+</html>
